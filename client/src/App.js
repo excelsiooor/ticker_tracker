@@ -3,33 +3,27 @@ import {useDispatch, useSelector} from 'react-redux';
 import { useEffect } from 'react';
 import { getTickers } from './Redux/Actions/getTickers';
 import Ticker from './components/Ticker';
-import Timer from './components/Timer';
-import AddTicker from './components/AddTicker';
+import Form from './components/Form';
 
 function App() {
 
   const dispatch = useDispatch()
-  const tickers = useSelector(state => state.tickersReducer.tickers)
-  const timer = useSelector(state => state.tickersReducer.timer)
+  const tickers = useSelector(state => state.tickers.tickers)
 
   useEffect(() => {
     dispatch(getTickers())
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-
+  }, [dispatch])
 
   return (
     <div className="main">
       <div className='main__header'>
-        {tickers.map(ticker =>
-          <Ticker ticker={ticker} />
-        )}
+        <Form/>
       </div>
       <div className='main__content'>
-        <AddTicker/>
+        {tickers.map(ticker =>
+          <Ticker key={ticker.id} ticker={ticker} />
+        )}
       </div>
-      <Timer timer={timer} />
     </div>
   );
 }
