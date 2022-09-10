@@ -1,0 +1,94 @@
+.ticker {
+
+    width: 100%;
+    max-width: 400px;
+    min-height: 50px;
+
+    padding: 5px;
+    background-color: rgb(242, 242, 242);
+    border-radius: 5px 5px 0px 0px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    font-size: .75rem;
+
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticker__item {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ticker__info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ticker__increment,
+.ticker__decrement,
+.ticker__gray {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    margin: 0 10px 0 0;
+    & div {
+        width: 16px;
+        height: 16px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+.ticker__increment {
+    background-color: #13733377;
+    & div {
+        background-image: url(../../pictures/svg/arrowUp.svg);
+    }
+}
+
+.ticker__decrement {
+    background-color: #a50e0e7a;
+    & div {
+        background-image: url(../../pictures/svg/arrowDown.svg);
+    }
+}
+
+.ticker__gray {
+    background-color: gray;
+}
+
+.ticker__change-up {
+    color: #137333;
+}
+.ticker__change-down {
+    color: #a50e0e;
+}
+.ticker__change-gray {
+    color: gray;
+}
+.ticker__info {
+    width: 110px;
+}
+
+.ticker__btn {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #a50e0e7a;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #ef15157a;
+    }
+}
