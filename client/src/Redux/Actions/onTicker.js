@@ -1,8 +1,8 @@
-import { ON_TICKER } from "../types";
+import { TICKER_ON } from "../types";
 
 export function onTicker (ticker) {
     return {
-        type: ON_TICKER,
+        type: TICKER_ON,
         data: ticker,
     }
 }

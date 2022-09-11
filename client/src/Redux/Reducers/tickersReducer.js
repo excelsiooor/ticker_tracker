@@ -1,7 +1,7 @@
 import { 
     GET_TICKERS,
-    OFF_TICKER,
-    ON_TICKER,
+    TICKER_OFF,
+    TICKER_ON,
     ADD_TICKER,
     DELETE_TICKER
     } from "../types"; 
@@ -40,7 +40,7 @@ export function tickersReducer (state = initialState, action) {
                 tickers: sortedData
             }
 
-        case OFF_TICKER:
+        case TICKER_OFF:
 
             //add new exeptions
             state.exeptions.push(action.data)
@@ -49,7 +49,7 @@ export function tickersReducer (state = initialState, action) {
                 ...state
             }
 
-        case ON_TICKER:
+        case TICKER_ON:
 
             //remove exeptions 
             for( let i = 0; i < state.exeptions.length; i++){ 
@@ -77,6 +77,6 @@ export function tickersReducer (state = initialState, action) {
 }
 
 //action creator
-export const setTickers = (res) => ({type: GET_TICKERS, data: res})
+export const updateTickers = (res) => ({type: GET_TICKERS, data: res})
 export const addActionTicker = (res) => ({type:ADD_TICKER, data: res})
 export const deleteActionTicker = (res) => ({type:DELETE_TICKER, data: res})

@@ -1,8 +1,8 @@
-import { OFF_TICKER } from "../types";
+import { TICKER_OFF } from "../types";
 
 export function offTicker (ticker) {
     return {
-        type: OFF_TICKER,
+        type: TICKER_OFF,
         data: ticker,
     }
 }

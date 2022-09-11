@@ -1,5 +1,4 @@
 
-
 const TickerUI = ({ticker, switchStatus}) => {
 
     let changes = {

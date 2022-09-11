@@ -1,7 +1,7 @@
 import AddDelay from "./UI/addDelay/AddDelay";
 import AddTicker from "./UI/addTicker/AddTicker";
 
-const Form = () => {
+const ControlPanel = () => {
     return (
         <div className="main__form">
                 <AddDelay/>
@@ -10,4 +10,4 @@ const Form = () => {
     );
 }
 
-export default Form;
+export default ControlPanel;

@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import { useEffect } from 'react';
 import { getTickers } from './Redux/Actions/getTickers';
 import Ticker from './components/Ticker';
-import Form from './components/Form';
+import ControlPanel from './components/ControlPanel';
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="main">
       <div className='main__header'>
-        <Form/>
+        <ControlPanel/>
       </div>
       <div className='main__content'>
         {tickers.map(ticker =>

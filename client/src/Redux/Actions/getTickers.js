@@ -1,4 +1,4 @@
-import { setTickers } from "../Reducers/tickersReducer";
+import { updateTickers } from "../Reducers/tickersReducer";
 import { getSocket } from '../socketConnect';
 
 export function getTickers () {
@@ -7,7 +7,7 @@ export function getTickers () {
         socket.emit('start');
         socket.on('ticker', async function(response) {
             const res = Array.isArray(response) ? response : [response];
-            await dispatch(setTickers(res))
+            await dispatch(updateTickers(res))
         });
     }
 }
