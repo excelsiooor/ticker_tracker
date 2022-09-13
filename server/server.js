@@ -67,7 +67,7 @@ function sendQuotes(socket) {
 }
 
 //init interval
-let interval = 0;
+let interval = 1000;
 //init inerval id
 let intervalID
 
