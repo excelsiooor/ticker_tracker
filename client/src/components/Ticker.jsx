@@ -2,13 +2,13 @@ import { useState } from 'react';
 import TickerControll from "./UI/tickerControll/TickerControll";
 import TickerUI from "./UI/tickerUI/TickerUI";
 
-const Ticker = ({ticker, key}) => {
+const Ticker = ({ticker}) => {
 
     //init local "switch status" to every new ticker
     const [switchStatus, setSwitchStatus] = useState(true);
 
     return (
-        <div key={key} className="ticker">
+        <div className="ticker">
 
             <TickerUI 
             ticker={ticker} 
