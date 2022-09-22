@@ -45,9 +45,7 @@ export function tickersReducer (state = initialState, action) {
             //add new exeptions
             state.exeptions.push(action.data)
 
-            return {
-                ...state
-            }
+            return state
 
         case TICKER_ON:
 
@@ -57,19 +55,15 @@ export function tickersReducer (state = initialState, action) {
                     state.exeptions.splice(i, 1); 
                 }
             }
-            return {
-                ...state
-            }
+            return state
 
         case ADD_TICKER:
-            return{
-                ...state
-            }
+
+            return state
 
         case DELETE_TICKER:
-            return{
-                ...state
-            }
+
+            return state
 
         default: 
             return state
